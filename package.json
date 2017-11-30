@@ -1,0 +1,18 @@
+{
+  "name": "static-server",
+  "version": "1.0.0",
+  "description": "node-static-server",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wolfeidau/npmtest.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "time2funk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
