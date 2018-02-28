@@ -7,13 +7,83 @@
 	</head>
 	<body>
 
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/2VUludkxZz0" frameborder="0" allowfullscreen></iframe>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/_x3gitcwtAc" frameborder="0" allowfullscreen></iframe>
+		<div class="article">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+			<span class='youtube-container'>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/2VUludkxZz0" frameborder="0" allowfullscreen></iframe>
+			</span>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+		<div class="youtube-pop-set">
+			<div class="youtube-pop-item">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/_x3gitcwtAc" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="youtube-pop-item">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/_x3gitcwtAc" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="youtube-pop-item">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/_x3gitcwtAc" frameborder="0" allowfullscreen></iframe>
+			</div>	
+			<div class="youtube-pop-item">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/_x3gitcwtAc" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="youtube-pop-item">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/_x3gitcwtAc" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="youtube-pop-item">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/_x3gitcwtAc" frameborder="0" allowfullscreen></iframe>
+			</div>		
+		</div>
 	</body>
 
 	<script>
 		function youTubes_makeDynamic() {
-			var $ytIframes = $('iframe[src*="youtube.com"]');
+			var $ytIframes = $('.youtube-container iframe[src*="youtube.com"]');
 			$ytIframes.each(function (i,e) {
 				var $ytFrame = $(e);
 				var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
@@ -29,7 +99,38 @@
 				});
 			});
 		};
-		$(document).ready(function () {youTubes_makeDynamic()});
+		function youTubes_makeDynamicPopup() {
+			var $ytIframes = $('.youtube-pop-item iframe[src*="youtube.com"]');
+			$ytIframes.each(function (i,e) {
+				var $ytFrame = $(e);
+				var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
+				var $ytLoader = $('<div class="ytLoader">');
+				$ytLoader.append($('<img class="cover" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));			
+				$ytLoader.data('$ytFrame',$ytFrame);
+				$ytFrame.replaceWith($ytLoader);
+				$ytLoader.click(function () {
+					// alert(1);
+					var $ytPopup = $('<div class="ytPopup">');
+					var $back = $('<div class="popup-back">');
+					var $ytFrame = $ytLoader.data('$ytFrame');
+					$ytFrame.attr('src',$ytFrame.attr('src')+'?autoplay=1');
+					$ytPopup.append($back);
+					$back.click(function(e){
+						e.preventDefault();
+						// $('body').remove($ytPopup);
+						$(this).parent().remove();
+					});
+					$ytPopup.append($ytFrame);
+					// $ytLoader.replaceWith($ytPopup);
+					$('body').append($ytPopup);
+
+				});
+			});
+		};
+		$(document).ready(function () {
+			youTubes_makeDynamic();
+			youTubes_makeDynamicPopup();
+		});
 	</script>
 	<script>
 		(function () {
@@ -70,4 +171,72 @@
 			});
 		})();
 	</script>
+
+	<style>
+		.youtube-pop-set {
+		    clear: both;
+		    width: 100%;
+		    height: auto;
+		    overflow: hidden;
+
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+		    /*flex-direction: row;*/
+		    -webkit-flex-flow: row wrap;
+		    -ms-flex-flow: row wrap;
+		    flex-flow: row wrap;
+		    justify-content: center;
+		}
+		.youtube-pop-item{
+		    width: 300px;
+		    height: 200px;
+		    overflow: hidden;
+		    /*float: right;*/
+		    display: inline-block;
+		    /*margin-left: 20px;*/
+		    /*margin: auto;*/
+			width: 25%;
+		    padding: 5px;
+		}
+		.youtube-container {
+		    width: 300px;
+		    height: 200px;
+		    overflow: hidden;
+		    float: right;
+		    display: inline-block;
+		    margin-left: 20px;
+		}
+		iframe {
+		    max-width: 100%;
+		    max-height: 100%;
+		}
+		.ytLoader img{
+			width:100%;
+			height: 100%;
+		}
+		.ytPopup {
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100vh;
+		    background: #00000094;
+		}
+		.ytPopup iframe {
+		    margin: 50vh auto;
+		    display: block;
+		    transform: translateY(-50%);
+		}
+		.ytPopup .popup-back {
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100vh;
+		    background: #00000094;
+		    position: absolute;
+		}
+	</style>
 </html>
